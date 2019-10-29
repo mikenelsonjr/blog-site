@@ -3,7 +3,9 @@
     "Overview": ["tool-overview"],
     "Workload Migration Tool": ["workload-migration/workload-mig-env-setup", 
       "workload-migration/app-migrations",
-      "workload-migration/profile-migrations"],
+      "workload-migration/profile-migrations",
+      "workload-migration/baseline-migrations",
+      "workload-migration/template-deployments"],
     "Policy Enforcer": ["policy-enforcer/policy-enforcer"],
     "Supply Drop": ["doc3"]
   },

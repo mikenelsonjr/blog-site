@@ -39,13 +39,11 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'tool-overview', label: 'Tools'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
-  users,
+  // users,
 
   /* path to images for header/footer */
   headerIcon: 'img/favicon.ico',
@@ -54,8 +52,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#889573',
-    secondaryColor: '#5f6850',
+    primaryColor: '#3489eb',
+    secondaryColor: '#adcfed',
   },
 
   /* Custom fonts for website */

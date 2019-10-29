@@ -101,7 +101,7 @@ class Index extends React.Component {
               'The tools documented on this site help ease the transition to a Modern method of ' +
               'delivering Endpoint services',
             image: `${baseUrl}img/undraw_master_plan_95wa.svg`,
-            imageAlign: 'right',
+            imageAlign: 'left',
             title: 'Overview',
           },
         ]}

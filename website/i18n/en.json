@@ -5,22 +5,6 @@
     "previous": "Previous",
     "tagline": "Tools and Methodologies for Modern Endpoint Services",
     "docs": {
-      "doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Environment Setup"
-      },
-      "doc2": {
-        "title": "document number 2"
-      },
-      "doc3": {
-        "title": "This is document number 3"
-      },
-      "doc4": {
-        "title": "Other Document"
-      },
-      "doc5": {
-        "title": "Fifth Document"
-      },
       "policy-enforcer/policy-enforcer": {
         "title": "VMware Policy Enforcer",
         "sidebar_label": "Policy Enforcer"
@@ -30,22 +14,28 @@
         "sidebar_label": "Overview"
       },
       "workload-migration/app-migrations": {
-        "title": "App Migrations",
-        "sidebar_label": "App Migrations"
+        "title": "Applications and Migration",
+        "sidebar_label": "Applications"
+      },
+      "workload-migration/baseline-migrations": {
+        "title": "Baseline Migrations",
+        "sidebar_label": "Baseline Migrations"
       },
       "workload-migration/profile-migrations": {
         "title": "Profile Migrations",
         "sidebar_label": "Profile Migrations"
       },
+      "workload-migration/template-deployments": {
+        "title": "Template Deployments",
+        "sidebar_label": "Template Deployments"
+      },
       "workload-migration/workload-mig-env-setup": {
-        "title": "Environment Setup",
-        "sidebar_label": "Environment Setup"
+        "title": "Overview and Environment Setup",
+        "sidebar_label": "Overview & Setup"
       }
     },
     "links": {
       "Tools": "Tools",
-      "API": "API",
-      "Help": "Help",
       "Blog": "Blog"
     },
     "categories": {
