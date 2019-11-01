@@ -21,9 +21,9 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'MikeNelsonJr.com', // Title for your website.
-  subTitle: 'Mike Nelson\'s Tools and Blog',
-  tagline: 'Workspace ONE Tools and Utilites',
+  title: 'Mike Nelson Jr', // Title for your website.
+  subTitle: 'VMware Workspace ONE | Windows 10 | macOS',
+  tagline: 'Tools, Scripts and Posts about VMware Workspace ONE',
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
