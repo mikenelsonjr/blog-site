@@ -86,7 +86,7 @@ The next set of steps focus on creating the new Windows 10 profile and deploying
     1. Set the profile assignement type. "Auto" will deploy the profile automatically and "Manual" makes the profile an on demand setting
     1. Assign the profile to the desired Smart Group.
 
-    ![img](/img/2020-03-20/GeneralProfileSettings.png)
+    ![img](/img/blogimages/2020-03-20/GeneralProfileSettings.png)
     
 
 1. Configure Custom Settings
