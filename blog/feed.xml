@@ -4,7 +4,7 @@
         <title>Mike Nelson Jr Blog</title>
         <link>https://mikenelsonjr.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest Mike Nelson Jr news and events.</description>
-        <lastBuildDate>Fri, 01 Nov 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Mar 2020 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -12,14 +12,14 @@
             <url>https://mikenelsonjr.github.io/undefined</url>
             <link>https://mikenelsonjr.github.io/blog</link>
         </image>
-        <copyright>Copyright © 2019 Mike Nelson Jr</copyright>
+        <copyright>Copyright © 2020 Mike Nelson Jr</copyright>
         <item>
-            <title><![CDATA[Hello World]]></title>
-            <link>https://mikenelsonjr.github.io/blog/2019/11/01/hello-world.html</link>
-            <guid>https://mikenelsonjr.github.io/blog/2019/11/01/hello-world.html</guid>
-            <pubDate>Fri, 01 Nov 2019 06:00:00 GMT</pubDate>
-            <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="hello-world"></a><a href="#hello-world" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hello World</h2>
-<p>Welcome to my site and my first blog post. On this site, I will be documenting several tools I've built to help customers using the Workspace ONE platform. Most of these tools are built to assist in day to day activities or help improve a process.</p>
+            <title><![CDATA[How to set Registry values using the Custom Settings profile in Workspace ONE UEM]]></title>
+            <link>https://mikenelsonjr.github.io/blog/2020/03/19/registrykey-customsettings.html</link>
+            <guid>https://mikenelsonjr.github.io/blog/2020/03/19/registrykey-customsettings.html</guid>
+            <pubDate>Thu, 19 Mar 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>As a Workspace ONE UEM administrator, there are times when you may need to set a registry key manually. This could be so that an application has a specific setting or maybe a security setting that is not yet available via Windows 10 MDM. In this post, we will walk through how to configure a registry setting and also how to clean up that setting when the profile is removed via the Workspace ONE UEM console (UEM Console).</p>
 ]]></description>
         </item>
     </channel>
