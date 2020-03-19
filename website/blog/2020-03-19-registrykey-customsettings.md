@@ -86,7 +86,7 @@ The next set of steps focus on creating the new Windows 10 profile and deploying
     1. Set the profile assignement type. "Auto" will deploy the profile automatically and "Manual" makes the profile an on demand setting
     1. Assign the profile to the desired Smart Group.
 
-    ![img](img/blogimages/2020-03-20/GeneralProfileSettings.png)
+    ![img](/img/2020-03-20/GeneralProfileSettings.png)
     
 
 1. Configure Custom Settings
@@ -95,7 +95,7 @@ The next set of steps focus on creating the new Windows 10 profile and deploying
     1. Paste the Install Settings in the Install Settings text box
     1. Paste the Remove Settings in the Remove Settings text box
 
-    ![img](img/blogimages/2020-03-20/CustomSettings.png)
+    ![img](/img/blogimages/2020-03-20/CustomSettings.png)
 
 1. Save and Publish the profile
 1. Verify the device list is correct and click Publish
@@ -103,7 +103,7 @@ The next set of steps focus on creating the new Windows 10 profile and deploying
 ### Confirm Settings
 For one of the target devices, the profile has reported back that it is installed. 
 
-![img](img/blogimages/2020-03-20/ConsoleInstalled.png)
+![img](/img/blogimages/2020-03-20/ConsoleInstalled.png)
 
 On the device, RegistryEditor will verify if the settings applied successfully.
 1. Open RegEdit.exe
@@ -112,7 +112,7 @@ On the device, RegistryEditor will verify if the settings applied successfully.
 1. Click on "FakeApp"
 1. Notice in the window that there are now two settings applied. These settings match what was installed.
 
-![img](img/blogimages/2020-03-20/InstalledRegistrySettings.png)
+![img](/img/blogimages/2020-03-20/InstalledRegistrySettings.png)
 
 ### Verify Removal
 Now that install is working, check that the removal of these settings is working as desired. 
@@ -120,11 +120,11 @@ Now that install is working, check that the removal of these settings is working
 1. In the console, click Remove to initiate the Remove profile command.
 1. Once the device checks in, it will process the command and indicate that the profile is removed.
 
-![img](img/blogimages/2020-03-20/ConsoleRemoved.png)
+![img](/img/blogimages/2020-03-20/ConsoleRemoved.png)
 
 1. On the device, refresh the registry. Notice that while the hive/key are present still, the values themselves have been removed correctly.
 
-![img](img/blogimages/2020-03-20/RemovedRegistrySettings.png)
+![img](/img/blogimages/2020-03-20/RemovedRegistrySettings.png)
 
 ## Wrap Up
 In this How To post, a Custom Settings profile was configured in the UEM console and pushed to a device. These settings configured a fictitiousicous application in the registry. A similar process can be used to configure the registry in many ways that a use case may dictate for your deployment. 
