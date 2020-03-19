@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Mike Nelson Jr', // Title for your website.
-  subTitle: 'Modern Management Tools & Posts',
+  subTitle: 'Helpful Tools and Guides for VMware Workspace ONE',
   tagline: 'VMware Workspace ONE | Windows 10 | macOS',
   url: 'https://mikenelsonjr.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */

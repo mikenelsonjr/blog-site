@@ -60,7 +60,7 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
+        {/* <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} /> */}
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
@@ -97,9 +97,9 @@ class Index extends React.Component {
         {[
           {
             content:
-              'The journey to Modern Management is not always simple or easy. ' +
-              'The tools documented on this site help ease the transition to a Modern method of ' +
-              'delivering Endpoint services',
+              'The journey to modern management is not always simple or easy. ' +
+              'The tools documented on this site help ease the transition to Workspace ONE UEM ' +
+              'and a modern method of delivering Endpoint services.',
             image: `${baseUrl}img/undraw_master_plan_95wa.svg`,
             imageAlign: 'left',
             title: 'Overview',
