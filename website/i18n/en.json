@@ -9,6 +9,10 @@
         "title": "VMware Policy Enforcer",
         "sidebar_label": "Policy Enforcer"
       },
+      "supply-drop/supply-drop-setup": {
+        "title": "Overview, Setup, and Usage",
+        "sidebar_label": "Overview, Setup & Usage"
+      },
       "tool-overview": {
         "title": "Tools and Utilities",
         "sidebar_label": "Overview"
@@ -41,8 +45,8 @@
     "categories": {
       "Overview": "Overview",
       "Workload Migration Tool": "Workload Migration Tool",
-      "Policy Enforcer": "Policy Enforcer",
       "Supply Drop": "Supply Drop",
+      "Policy Enforcer": "Policy Enforcer",
       "First Category": "First Category"
     }
   },
