@@ -6,8 +6,8 @@
       "workload-migration/profile-migrations",
       "workload-migration/baseline-migrations",
       "workload-migration/template-deployments"],
-    "Policy Enforcer": ["policy-enforcer/policy-enforcer"],
-    "Supply Drop": ["doc3"]
+    "Supply Drop": ["supply-drop/supply-drop-setup"],
+    "Policy Enforcer": ["policy-enforcer/policy-enforcer"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
