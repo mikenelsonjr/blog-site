@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Overview, Setup, and Usage · Mike Nelson Jr</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Overview"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Overview, Setup, and Usage · Mike Nelson Jr"/><meta property="og:type" content="website"/><meta property="og:url" content="https://mikenelsonjr.github.io/"/><meta property="og:description" content="## Overview"/><meta property="og:image" content="https://mikenelsonjr.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://mikenelsonjr.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://mikenelsonjr.github.io/blog/atom.xml" title="Mike Nelson Jr Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://mikenelsonjr.github.io/blog/feed.xml" title="Mike Nelson Jr Blog RSS Feed"/><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">Mike Nelson Jr</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/tool-overview" target="_self">Tools</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Supply Drop</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/tool-overview">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Workload Migration Tool</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/workload-migration/workload-mig-env-setup">Overview &amp; Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/workload-migration/app-migrations">Applications</a></li><li class="navListItem"><a class="navItem" href="/docs/workload-migration/profile-migrations">Profile Migrations</a></li><li class="navListItem"><a class="navItem" href="/docs/workload-migration/baseline-migrations">Baseline Migrations</a></li><li class="navListItem"><a class="navItem" href="/docs/workload-migration/template-deployments">Template Deployments</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Supply Drop</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/supply-drop/supply-drop-setup">Overview, Setup &amp; Usage</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Policy Enforcer</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/policy-enforcer/policy-enforcer">Policy Enforcer</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Overview, Setup, and Usage</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>Workspace ONE Supply Drop is a tool that allows an Admin to quickly package and deploy Widnows 10 scripts and applications via the Workspace ONE UEM console and Intelligent Hub on end user devices. Supply Drop contains two components, the Designer tool and the Run Time tool. The Designer tool is used to build the packages and the Run time is use to install the package on a device via Workspace ONE UEM.</p>
+<h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<ol>
+<li>Download the installer from the VMware Flings site.</li>
+<li>Run the Installer MSI with Admin privileges.</li>
+<li>Once the installer is finished, the designer is ready to be launched and used.</li>
+</ol>
+<p><img src="/docs/assets/supplydrop/supply-drop-installed.png" alt=""></p>
+<p><strong>Note:</strong> When the designer is launch it will ask for Admin permissions.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-package-quick-start"></a><a href="#create-a-package-quick-start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Package (Quick start)</h2>
+<ol>
+<li>From the Designer's main view, click <em>Create New Project</em>
+<ul>
+<li>The Package Project view will now display.</li>
+</ul></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="create-the-package-manifest"></a><a href="#create-the-package-manifest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create the Package Manifest</h3>
+<ol>
+<li>Fill in the package name.
+<ul>
+<li>This name is used to identify the package on the device and in the console.</li>
+</ul></li>
+<li>Fill in the package version to be used.
+<ul>
+<li>The Version is used to reference an install and to provide a level of versioning to builds</li>
+</ul></li>
+<li>Select the Source Files for the package. This will be the root folder of the package containing any needed contents for it to be run.</li>
+<li>Once the source files are selected, a dialog will appear. The dialog presents an option to <em>Cache Package Contents</em> and a list of files in the root of the source files. Select the desired run/install command of the package.
+<ul>
+<li>Generally, this will be the install script or executable of the package.</li>
+<li>If a powershell script is selected then the designer will autofill information needed for the package to install via Workspace ONE UEM.</li>
+<li>Cache Package Contents will store the files on the file system for later use.</li>
+<li>A custom command can be leveraged as well by selecting the appropriate option.</li>
+</ul></li>
+</ol>
+<p><img src="/docs/assets/supplydrop/supply-drop-run-script.png" alt="img"></p>
+<ol>
+<li>With the install command selected/configured, the designer will show the Manifest information configured and also the Contents of the Package that will be built.</li>
+<li>Click <strong>Build Package</strong> in order to build the package.</li>
+<li>Once the package is built, a dialog will show to view the output of the build process.
+<img src="/docs/assets/supplydrop/supply-drop-build-settings.png" alt="img">
+Output Folder
+<img src="/docs/assets/supplydrop/supply-drop-package-output.png" alt="img"></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="upload-to-workspace-one-uem"></a><a href="#upload-to-workspace-one-uem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upload to Workspace ONE UEM</h2>
+<p>After logging into the Workspace ONE UEM console, perform the following actions:</p>
+<ol>
+<li>Add a new Internal Application</li>
+<li>Edit the Details as needed. Such as Name and Version
+<img src="/docs/assets/supplydrop/supply-drop-console-details.png" alt="img"></li>
+<li>On the <em>Files</em> tab, scroll down to the uninstall command and enter <em>uninstall</em></li>
+<li>On the Deployment Options tab, fill out the following items:
+<ul>
+<li>Install Context - this can be either Device or User. For an interactive package, select User</li>
+<li>Install Command - <code>WorkspaceONESupplyDrop.exe</code></li>
+<li>Admin Privileges - Set to <strong>YES</strong>
+<img src="/docs/assets/supplydrop/supply-drop-deployment-options.png" alt="img"></li>
+<li>When to Call install Complete
+<ul>
+<li>Click Add to set the defining criteria</li>
+<li>Select Registry Exists</li>
+<li>Path: HKLM\SOFTWARE\WOW6432Node\WorkspaceONESupplyDrop\ <strong>Package Name from the Manifest</strong></li>
+<li>Value Name: <strong>Version</strong></li>
+<li>Value Type: <strong>String</strong></li>
+<li>Value Data: <strong>Version from the Manifest</strong>
+<img src="/docs/assets/supplydrop/supply-drop-registry-criteria.png" alt="img"></li>
+</ul></li>
+</ul></li>
+<li>Click Save &amp; Assign</li>
+<li>Configure the Assignment Groups and Package installation behavior.</li>
+</ol>
+<p>The Package is now ready to deploy to end user devices.</p>
+<!-- ## Configure API Connection 
+This step is optional. If the API connection is not configured then the designer will not be able to upload the package to the Workspace ONE UEM console.
+<p>To configure the API Connection follow the following steps:</p>
+<ol>
+<li>From the settings menu, click on the API Settings menu option
+<img src="/docs/assets/supplydrop/supply-drop-apisettings-one.png" alt=""></li>
+<li>In the dialog fill in the required information.
+<ol>
+<li>Server URL</li>
+<li>API Key</li>
+<li>API Username</li>
+<li>Password</li>
+<li>Org Group ID</li>
+</ol></li>
+</ol>
+<p><img src="/docs/assets/supplydrop/supply-drop-apisettings-two.png" alt=""></p>
+<p>--&gt;</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/workload-migration/template-deployments"><span class="arrow-prev">← </span><span>Template Deployments</span></a><a class="docs-next button" href="/docs/policy-enforcer/policy-enforcer"><span>Policy Enforcer</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#installation">Installation</a></li><li><a href="#create-a-package-quick-start">Create a Package (Quick start)</a><ul class="toc-headings"><li><a href="#create-the-package-manifest">Create the Package Manifest</a></li></ul></li><li><a href="#upload-to-workspace-one-uem">Upload to Workspace ONE UEM</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"></section><section class="copyright">Copyright © 2020 Mike Nelson Jr</section></footer></div></body></html>
